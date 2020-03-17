@@ -7,6 +7,23 @@ export default function () {
     },
     experiences: [
       {
+        company: 'Freelance Contractor',
+        title: 'Technology Solutions Consultant',
+        location: 'Rocklin, CA (Remote)',
+        date: 'Sept 2017 - Present',
+        desc: {
+          info: 'Scope, architect and hands-on development as a consulting engineer for various clients, including AAHomestays, Alderwood Group, Enjoy Inc, Infinite Jiujitsu, KarFarm, Oracle and others',
+          resp: [
+            'Full-stack software development and consulting',
+            'Technical consulting based on business objectives',
+            'Chef and DevOps consulting',
+            'Chrome and Firefox browser extensions authoring'
+          ],
+          tools: 'Docker, Postgres, ReactJS, Ruby on Rails, VueJS',
+          services: 'CircleCI, Github, Gitlab, Optimizely, Shopify, Trello, Twilio'
+        }
+      },
+      {
         company: 'Agency MVP Inc',
         title: 'VP of Engineering',
         location: 'Dallas, TX (Remote in CA)',
