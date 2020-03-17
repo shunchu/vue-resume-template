@@ -11,7 +11,7 @@
             </td>
             <td class="text-left">
               <ul>
-                <my-experience v-for="(experience, index) in experiences" :experience="experience" :key="index"></my-experience>
+                <my-experience v-for="(experience, index) in experiences" v-bind:experience="experience" v-bind:key="index"></my-experience>
               </ul>
             </td>
           </tr>
@@ -22,7 +22,7 @@
             </td>
             <td class="text-left">
               <ul>
-                <my-education v-for="(edu, index) in education" :edu="edu" :key="index"></my-education>
+                <my-education v-for="(edu, index) in education" v-bind:edu="edu" v-bind:key="index"></my-education>
               </ul>
             </td>
           </tr>
@@ -33,7 +33,7 @@
             </td>
             <td class="text-left">
               <ul>
-                <my-volunteer v-for="(vol, index) in volunteer" :vol="vol" :key="index"></my-volunteer>
+                <my-volunteer v-for="(vol, index) in volunteer" v-bind:vol="vol" v-bind:key="index"></my-volunteer>
               </ul>
             </td>
           </tr>
@@ -44,7 +44,7 @@
             </td>
             <td class="text-left">
               <ul>
-                <my-social-media v-for="(medium, index) in social_media" :medium="medium" :key="index"></my-social-media>
+                <my-social-media v-for="(medium, index) in social_media" v-bind:medium="medium" v-bind:key="index"></my-social-media>
               </ul>
             </td>
           </tr>
