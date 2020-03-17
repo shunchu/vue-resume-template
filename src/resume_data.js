@@ -19,7 +19,8 @@ export default function () {
             'Managed a team of developers across 4 international timezones'
           ],
           tools: 'Chef, Ember.js, Postgres, Ruby on Rails, Sinatra',
-          services: 'AWS (ElastiCache, OpsWorks, RDS, S3, SQS… etc), CircleCI, Github, Rollbar, Stripe, Texas DMV data, Trello, Twilio' }
+          services: 'AWS (ElastiCache, OpsWorks, RDS, S3, SQS… etc), CircleCI, Github, Rollbar, Stripe, Texas DMV data, Trello, Twilio'
+        }
       },
       {
         company: 'BlueKai (acquired by Oracle)',
@@ -116,8 +117,8 @@ export default function () {
       }
     ],
     education: [
-      { school: 'Savannah College of Art & Design', degree: 'MFA, Interactive Design & Game Development', location: 'Savannah, GA', distinctions: [ 'Presidential Fellowship recipient' ] },
-      { school: 'Savannah College of Art & Design', degree: 'BFA, Computer Art', location: 'Savannah, GA', distinctions: [ 'Outstanding portfolio scholarship recipient', 'Received five prestigious student leadership awards' ] },
+      { school: 'Savannah College of Art & Design', degree: 'MFA, Interactive Design & Game Development', location: 'Savannah, GA', distinctions: ['Presidential Fellowship recipient'] },
+      { school: 'Savannah College of Art & Design', degree: 'BFA, Computer Art', location: 'Savannah, GA', distinctions: ['Outstanding portfolio scholarship recipient', 'Received five prestigious student leadership awards'] },
       { school: 'UC Santa Cruz Extension', degree: 'Certificate, Unix/Linux System Management & Administration', location: 'Cupertino, CA', distinctions: [] }
     ],
     volunteer: [
