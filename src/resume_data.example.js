@@ -18,7 +18,8 @@ export default function () {
             'Provide insights to app engineering and business development'
           ],
           tools: '',
-          services: '' }
+          services: ''
+        }
       }
     ],
     education: [
