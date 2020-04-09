@@ -1,17 +1,26 @@
 <template>
   <div id="app container">
     <div class="col-md-12">
-      <my-headline v-bind:name="name" v-bind:contact="contact"></my-headline>
-
       <table class="table">
         <tbody>
+          <tr>
+            <td>&nbsp;</td>
+            <td class="left-padding">
+              <my-headline v-bind:name="name" v-bind:contact="contact"></my-headline>
+            </td>
+          </tr>
+
           <tr>
             <td>
               <h5>Experience</h5>
             </td>
             <td class="text-left">
               <ul>
-                <my-experience v-for="(experience, index) in experiences" v-bind:experience="experience" v-bind:key="index"></my-experience>
+                <my-experience
+                  v-for="(experience, index) in experiences"
+                  v-bind:experience="experience"
+                  v-bind:key="index"
+                ></my-experience>
               </ul>
             </td>
           </tr>
@@ -44,7 +53,11 @@
             </td>
             <td class="text-left">
               <ul>
-                <my-social-media v-for="(medium, index) in social_media" v-bind:medium="medium" v-bind:key="index"></my-social-media>
+                <my-social-media
+                  v-for="(medium, index) in social_media"
+                  v-bind:medium="medium"
+                  v-bind:key="index"
+                ></my-social-media>
               </ul>
             </td>
           </tr>
@@ -55,15 +68,15 @@
 </template>
 
 <script>
-import ResumeData from './resume_data'
-import MyEducation from './components/MyEducation.vue'
-import MyExperience from './components/MyExperience.vue'
-import MyHeadline from './components/MyHeadline'
-import MySocialMedia from './components/MySocialMedia'
-import MyVolunteer from './components/MyVolunteer.vue'
+import ResumeData from "./resume_data";
+import MyEducation from "./components/MyEducation";
+import MyExperience from "./components/MyExperience";
+import MyHeadline from "./components/MyHeadline";
+import MySocialMedia from "./components/MySocialMedia";
+import MyVolunteer from "./components/MyVolunteer";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     MyEducation,
     MyExperience,
@@ -71,21 +84,22 @@ export default {
     MySocialMedia,
     MyVolunteer
   },
-  data () {
-    return ResumeData()
+  data() {
+    return ResumeData();
   }
-}
+};
 </script>
 
 <style>
 @media print {
   body {
-    font-size: 12px;
+    height: 100%;
     margin: 0;
+    font-size: 12pt;
   }
 
   h6 {
-    font-size: 0.90rem;
+    font-size: 0.9rem;
   }
 
   td:first-child {
@@ -101,6 +115,7 @@ export default {
     text-align: center;
     color: #747474;
     margin: 40px 30px;
+    font-size: 15px;
   }
 
   td:first-child {
@@ -110,8 +125,12 @@ export default {
 }
 
 body {
-  font-family: 'Optima-Regular', 'Optima', 'Avenir', Helvetica, Arial, sans-serif;
-  font-size: 15px;
+  font-family: "Optima-Regular", "Optima", "Avenir", Helvetica, Arial,
+    sans-serif;
+}
+
+table tr:first-child td {
+  border-top: none;
 }
 
 td > ul > li:first-child {
@@ -121,6 +140,11 @@ td > ul > li:first-child {
 td > ul > li {
   list-style-type: none;
   padding: 15px 0 0 0;
+}
+
+td.left-padding {
+  clear: both;
+  padding-left: 50px;
 }
 
 h6 {
