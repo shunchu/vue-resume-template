@@ -102,6 +102,15 @@ export default {
     font-size: 0.9rem;
   }
 
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: auto;
+    page-break-after: auto;
+  }
+
   td:first-child {
     text-align: left;
     width: 120px;
