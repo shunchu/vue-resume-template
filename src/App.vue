@@ -99,7 +99,10 @@ export default {
   }
 
   h6 {
-    font-size: 0.9rem;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-underline-position: under;
   }
 
   table {

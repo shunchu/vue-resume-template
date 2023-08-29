@@ -21,7 +21,7 @@ export default {
 <style scoped>
 h1,
 h2 {
-  font-family: "Cochin", "Times New Roman";
+  font-family: "Cochin", "Times New Roman", serif;
   font-weight: normal;
 }
 </style>
