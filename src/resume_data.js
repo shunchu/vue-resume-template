@@ -32,7 +32,7 @@ export default function () {
             'Part of UI/UX core group implementing Enjoy\'s design language system',
             'Member of the "Partner" and then the "Retail" team',
           ],
-          tools: 'Ruby on Rails, React JS, Typescript, TailwindCSS, Postgresql, Jest, Testing Library, ... etc.',
+          tools: 'Ruby on Rails, React JS, Typescript, TailwindCSS, Postgresql, Jest, Testing Library... etc.',
         }
       },
       {
