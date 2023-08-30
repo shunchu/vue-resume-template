@@ -1,9 +1,9 @@
 <template>
   <div class="row">
-    <h1 class="col-8 text-left">
+    <h1 class="col-8">
       <strong>{{ name }}</strong>
     </h1>
-    <div class="col-4 text-right">
+    <div class="col-4 text-end">
       <div class="email">{{ contact.email }}</div>
       <div class="phone">{{ contact.phone }}</div>
     </div>
