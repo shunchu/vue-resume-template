@@ -7,17 +7,46 @@ export default function () {
     },
     experiences: [
       {
+        company: 'Asurion, LLC',
+        title: 'Sr. Software Engineer / Tech Lead',
+        location: 'Nashville, TN (Remote in CA)',
+        date: 'Aug 2022 - Jul 2023',
+        desc: {
+          info: 'Asurion Customer Sales engineering lead',
+          resp: [
+            'Took ownership and lead the Customer Sales team to successfully prototype and launch Asurion Product Catalog',
+            'Coordinated Customer Sales engineering efforts across Asurion\s expansive engineering org',
+            'Negotiated project deliverables, timelines, and team scope with stakeholders',
+          ],
+        }
+      },
+      {
+        company: 'Enjoy Technology, Inc',
+        title: 'Sr. Software Engineer',
+        location: 'San Mateo, CA (Remote)',
+        date: 'Jul 2020 - Aug 2022',
+        desc: {
+          info: 'Full-stack software developer',
+          resp: [
+            'Built out UI/UX of Enjoy\'s highly successful "Live Catalog" and other customer-facing products',
+            'Part of UI/UX core group implementing Enjoy\'s design language system',
+            'Member of the "Partner" and then the "Retail" team',
+          ],
+          tools: 'Ruby on Rails, React JS, Typescript, TailwindCSS, Postgresql, Jest, Testing Library... etc.',
+        }
+      },
+      {
         company: 'Freelance Contractor',
         title: 'Technology Solutions Consultant',
         location: 'Rocklin, CA (Remote)',
-        date: 'Sept 2017 - Present',
+        date: '2017 - 2020',
         desc: {
           info: 'Scope, architect and hands-on development as a consulting engineer for various clients, including AAHomestays, Alderwood Group, Enjoy Inc, Infinite Jiujitsu, KarFarm, Oracle and others',
           resp: [
             'Full-stack software development and consulting',
             'Technical consulting based on business objectives',
             'Chef and DevOps consulting',
-            'Chrome and Firefox browser extensions authoring'
+            'Chrome and Firefox browser extensions authoring',
           ],
           tools: 'Docker, Postgres, ReactJS, Ruby on Rails, VueJS',
           services: 'CircleCI, Github, Gitlab, Optimizely, Shopify, Trello, Twilio'
@@ -25,7 +54,7 @@ export default function () {
       },
       {
         company: 'Agency MVP Inc',
-        title: 'VP of Engineering',
+        title: 'Dir. of Engineering',
         location: 'Dallas, TX (Remote in CA)',
         date: 'Sept 2014 - Aug 2017',
         desc: {
@@ -33,7 +62,7 @@ export default function () {
           resp: [
             'Founding engineer; full stack development',
             'Acting scrum master & authored technical specs to meet business needs',
-            'Managed a team of developers across 4 international timezones'
+            'Managed a team of developers across 4 international timezones',
           ],
           tools: 'Chef, Ember.js, Postgres, Ruby on Rails, Sinatra',
           services: 'AWS (ElastiCache, OpsWorks, RDS, S3, SQS… etc), CircleCI, Github, Rollbar, Stripe, Texas DMV data, Trello, Twilio'
@@ -41,7 +70,7 @@ export default function () {
       },
       {
         company: 'BlueKai (acquired by Oracle)',
-        title: 'Sr Software Developer',
+        title: 'Sr. Software Developer',
         location: 'Cupertino, CA',
         date: 'Jan 2013 - Jul 2014',
         desc: {
@@ -50,7 +79,7 @@ export default function () {
             'Full stack developer with emphasis on UI/UX development',
             'Authored platform dev team Chef cookbooks for various production & beta instances',
             'Contributor to company-wide Chef cookbooks; on-boarded other devs on Chef ways',
-            'Maintained BlueKai iOS SDK'
+            'Maintained BlueKai iOS SDK',
           ],
           tools: 'Backbone.js, Chef, MySQL, Objective-C, Ruby on Rails',
           services: 'Airbrake, AWS, Chef Enterprise, Confluence, Github'
@@ -65,7 +94,7 @@ export default function () {
           info: 'Use iPhone camera to detect and measure blood pressure; accepted into Stanford Motwani Labs mentorship program',
           resp: [
             'Full stack and iOS development',
-            'User-informed research & business development'
+            'User-informed research & business development',
           ],
           tools: 'Objective-C (iOS client), Postgres, Ruby on Rails (services)',
           services: 'AWS EC2, Github, SendGrid, Trello'
@@ -80,7 +109,7 @@ export default function () {
           info: 'YC-funded SaaS specialized in SEO optimization recommendations',
           resp: [
             'Full stack RoR developer with emphasis on UI/UX',
-            'Revamped user dashboard with interactive metrics'
+            'Revamped user dashboard with interactive metrics',
           ],
           tools: 'handlebars.js, highcharts.js, i18n.js, Javascript, Postgres, Ruby on Rails, Wordpress',
           services: 'AWS, Github, Stripe'
@@ -96,7 +125,7 @@ export default function () {
           resp: [
             'UI platform engineering lead',
             'Devised a payment prototype that bypassed costly PCI certification',
-            'Lead efforts on CDN deployment for Wordpress, Flash and other front-end assets'
+            'Lead efforts on CDN deployment for Wordpress, Flash and other front-end assets',
           ],
           tools: 'Flash/AS3, Javascript, LAMP stack, Perforce, Wordpress, TestTrack',
           services: 'AWS S3/Cloudfront'
@@ -104,14 +133,14 @@ export default function () {
       },
       {
         company: 'Smarty Card (Gazillion Entertainment)',
-        title: 'Sr Software Engineer',
+        title: 'Sr. Software Engineer',
         location: 'San Mateo, CA',
         date: 'May 2008 - Oct 2009',
         desc: {
           info: 'Web-based education supplement for "tweens", winner of People\'s Choice Award at DEMO \'09 and NAPPA Gold Winner 2009',
           resp: [
             'Lead developer for marketing, payment and on-boarding flows',
-            'Key contributor to paid content in Flash/AS3'
+            'Key contributor to paid content in Flash/AS3',
           ],
           tools: 'Flash/AS3, Javascript, JSP, Perforce, TestTrack',
           services: ''
@@ -126,7 +155,7 @@ export default function () {
           info: 'Full stack contract web developer',
           resp: [
             'Meet and spec projects with clients',
-            'End-to-end full service web development'
+            'End-to-end full service web development',
           ],
           tools: 'Flash/AS3, Javascript, LAMP stack, webDAV, Wordpress',
           services: ''
@@ -140,7 +169,7 @@ export default function () {
     ],
     volunteer: [
       { cause: 'ACM SIGGRAPH', title: 'Paper Submission Jury', date: '2015-2017' },
-      { cause: 'Code enhancements & fixes to various projects on Github', title: 'OSS Contributor', date: '2016-2017' }
+      { cause: 'Code enhancements & fixes to various projects on Github', title: 'OSS Contributor', date: '2016-present' }
     ],
     social_media: [
       { name: 'Github', url: 'https://github.com/shunchu/' },

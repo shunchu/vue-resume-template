@@ -1,5 +1,5 @@
 <template>
-  <div id="app container">
+  <div id="app">
     <div class="col-md-12">
       <table class="table">
         <tbody>
@@ -95,16 +95,32 @@ export default {
   body {
     height: 100%;
     margin: 0;
-    font-size: 12pt;
+    font-size: 0.65rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
   }
 
   h6 {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: auto;
+    page-break-after: auto;
   }
 
   td:first-child {
     text-align: left;
-    width: 120px;
+    width: 100px;
   }
 }
 
@@ -112,7 +128,6 @@ export default {
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #747474;
     margin: 40px 30px;
     font-size: 15px;
