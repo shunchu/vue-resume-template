@@ -169,7 +169,7 @@ export default function () {
     ],
     volunteer: [
       { cause: 'ACM SIGGRAPH', title: 'Paper Submission Jury', date: '2015-2017' },
-      { cause: 'Code enhancements & fixes to various projects on Github', title: 'OSS Contributor', date: '2016-2017' }
+      { cause: 'Code enhancements & fixes to various projects on Github', title: 'OSS Contributor', date: '2016-present' }
     ],
     social_media: [
       { name: 'Github', url: 'https://github.com/shunchu/' },
