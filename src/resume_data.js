@@ -5,18 +5,35 @@ export default function () {
       email: 'shun.chu@gmail.com',
       phone: '408.940.5885'
     },
+    intro: 'With an MFA in Interaction Design & Game Development, Shun has spent his career crafting delightful user experiences. His keen eyes on UI/UX was quickly recognized early on in his engineering career, and he\'s been instrumental in leadership and contributor roles in organizations of all sizes ever since.',
     experiences: [
+      {
+        company: 'IGS Solutions, LLC',
+        title: 'Sr. Software Engineer / Frontend Lead',
+        location: 'Los Angeles, CA (Remote)',
+        date: 'Jul 2023 - Sept 2023',
+        desc: {
+          info: 'I was brought on as the first frontend engineer to establish UI/UX patterns and best practices for the team',
+          resp: [
+            'Collaborated with the design lead and orchestrated a design language system on everything from typography, colors to standardized component development using TailwindCSS and web component design concepts',
+            'Working with the inventory team and an inventory manager, we designed and implemented a working prototype of an infinitely more efficient inventory management flow',
+            'Used primarily only Rails Hotwire and Stimulus technologies without Javascript SPA overhead for internal tools'
+          ],
+          tools: 'Hotwire/Stimulus, Postgres, Ruby on Rails, TailwindCSS',
+        },
+      },
       {
         company: 'Asurion, LLC',
         title: 'Sr. Software Engineer / Tech Lead',
-        location: 'Nashville, TN (Remote in CA)',
+        location: 'Nashville, TN (Remote)',
         date: 'Aug 2022 - Jul 2023',
         desc: {
-          info: 'Asurion Customer Sales engineering lead',
+          info: 'Customer Sales engineering lead with emphasis on customer experience and revenue growth',
           resp: [
-            'Took ownership and lead the Customer Sales team to successfully prototype and launch Asurion Product Catalog',
-            'Coordinated Customer Sales engineering efforts across Asurion\s expansive engineering org',
-            'Negotiated project deliverables, timelines, and team scope with stakeholders',
+            'Led a talented team of full-stack developers responsible for growing customer sales during expert in-visit sessions',
+            'We successfully launched Asurion Product Catalog which drove a noticeable increase in RPV (revenue per visit) of almost 12% when it\'s used',
+            'Coordinated Customer Sales engineering priorities and effectively integrated our (formerly Enjoy) team into the Asurion tech stack across Asurion\'s expansive engineering org',
+            'Collaborated with peer tech leads to mitigate and resolve system-wide high priority tech debts that impacted risky software dependency upgrades',
           ],
         }
       },
@@ -28,11 +45,14 @@ export default function () {
         desc: {
           info: 'Full-stack software developer',
           resp: [
-            'Built out UI/UX of Enjoy\'s highly successful "Live Catalog" and other customer-facing products',
-            'Part of UI/UX core group implementing Enjoy\'s design language system',
-            'Member of the "Partner" and then the "Retail" team',
+            'Assisted, owned and built a number of Enjoy\'s web properties',
+            'Complete ownership of the Live Catalog product with +90% test coverage',
+            'When Live Catalog launched, we saw a 50% bump in overall attach rates (additionally, +160% in hardware/accessories and +20% in insurance/services)',
+            'Spearheaded Enjoy\'s i18n integration on frontend applications',
+            'Advocated for and was part of UI/UX core working group implementing Enjoy\'s design language system',
+            'Mentored, onboarded and paired with other frontend developers',
           ],
-          tools: 'Ruby on Rails, React JS, Typescript, TailwindCSS, Postgresql, Jest, Testing Library... etc.',
+          tools: 'Fullstory, i18next.js, Jest, Postgres, React JS, Ruby on Rails, TailwindCSS, Testing Library, Typescript... etc.',
         }
       },
       {
@@ -41,31 +61,38 @@ export default function () {
         location: 'Rocklin, CA (Remote)',
         date: '2017 - 2020',
         desc: {
-          info: 'Scope, architect and hands-on development as a consulting engineer for various clients, including AAHomestays, Alderwood Group, Enjoy Inc, Infinite Jiujitsu, KarFarm, Oracle and others',
+          info: 'Scope, architect and hands-on development as a consulting engineer. Clients included: AAHomestays, Alderwood Group, Enjoy Inc, Family Wealth Law Group, Infinite Jiujitsu, KarFarm, Oracle Corp... etc.',
           resp: [
             'Full-stack software development and consulting',
-            'Technical consulting based on business objectives',
+            'Technical consulting to achieve business objectives',
             'Chef and DevOps consulting',
-            'Chrome and Firefox browser extensions authoring',
+            'Browser extensions authoring',
           ],
-          tools: 'Docker, Postgres, ReactJS, Ruby on Rails, VueJS',
+          tools: 'Chef, Docker, Express JS, Postgres, React JS, Ruby on Rails, VueJS, WordPress',
           services: 'CircleCI, Github, Gitlab, Optimizely, Shopify, Trello, Twilio'
         }
       },
       {
         company: 'Agency MVP Inc',
         title: 'Dir. of Engineering',
-        location: 'Dallas, TX (Remote in CA)',
+        location: 'Dallas, TX (Remote)',
         date: 'Sept 2014 - Aug 2017',
         desc: {
-          info: '',
+          info: 'We pioneered a leads management software developed especially to tackle the unique challenges of the insurance sales industry',
           resp: [
-            'Founding engineer; full stack development',
-            'Acting scrum master & authored technical specs to meet business needs',
-            'Managed a team of developers across 4 international timezones',
+            'Founding engineer with leadership role for the engineering org',
+            'Acting scrum master & authored technical and product specs to meet business needs',
+            'Built and led a diverse engineering team that spanned across multiple international time zones',
+            'Built a data ingestion engine integrated with Texas DMV data pipeline',
+            'Designed and built data-rich ranking dashboard using internal recommendation algorithms for most valuable leads and prospects most likely to close',
+            'Full Twilio SMS integration for agents to consolidate communications with leads/prospects within the platform',
+            'Stripe subscription payment system integration',
+            'The service increased "lead to sales" conversion by a whopping 23% for agents using the platform -- a number so staggering that led to systems integration discussions with one of the major insurance players in the industry',
+            'Today, over 25% of Farmers insurance\'s top agencies use the platform',
+            'Bootstrapped and developed deployment pipeline using Chef and AWS',
           ],
           tools: 'Chef, Ember.js, Postgres, Ruby on Rails, Sinatra',
-          services: 'AWS (ElastiCache, OpsWorks, RDS, S3, SQS… etc), CircleCI, Github, Rollbar, Stripe, Texas DMV data, Trello, Twilio'
+          services: 'AWS (ElastiCache, OpsWorks, RDS, S3, SQS… etc), CircleCI, Github, Rollbar, Stripe, Texas DMV data service, Trello, Twilio'
         }
       },
       {
@@ -74,12 +101,13 @@ export default function () {
         location: 'Cupertino, CA',
         date: 'Jan 2013 - Jul 2014',
         desc: {
-          info: '',
+          info: 'Software engineer on the DMP (Data Management Platform) team',
           resp: [
-            'Full stack developer with emphasis on UI/UX development',
-            'Authored platform dev team Chef cookbooks for various production & beta instances',
-            'Contributor to company-wide Chef cookbooks; on-boarded other devs on Chef ways',
-            'Maintained BlueKai iOS SDK',
+            'Frontend/UI developer with occasional trips to the Rails land',
+            'Authored and maintained a series of Chef cookbooks (with +90% test coverage) for DMP machines (production on-site hardware) and EC2-based instances (beta environments) using DevOps best practices',
+            'Active contributor to company-wide Chef cookbooks',
+            'Helped train DMP colleagues on the Chef ways',
+            'Led iOS SDK efforts and worked closely with enterprise customers that deploy the SDK to ensure smooth integration',
           ],
           tools: 'Backbone.js, Chef, MySQL, Objective-C, Ruby on Rails',
           services: 'Airbrake, AWS, Chef Enterprise, Confluence, Github'
@@ -91,9 +119,9 @@ export default function () {
         location: 'San Jose, CA',
         date: 'Sept 2012 - Dec 2012',
         desc: {
-          info: 'Use iPhone camera to detect and measure blood pressure; accepted into Stanford Motwani Labs mentorship program',
+          info: 'Utilizing iPhone\'s camera to detect and measure blood pressure; accepted into Stanford Motwani Labs mentorship program',
           resp: [
-            'Full stack and iOS development',
+            'Technical co-founder; Ruby on Rails, web and iOS developer responsible for most of the software development stack',
             'User-informed research & business development',
           ],
           tools: 'Objective-C (iOS client), Postgres, Ruby on Rails (services)',
@@ -106,28 +134,32 @@ export default function () {
         location: 'Mountain View, CA',
         date: 'Aug 2011 - Jun 2012',
         desc: {
-          info: 'YC-funded SaaS specialized in SEO optimization recommendations',
+          info: 'YC-funded SaaS SEO recommendation engine',
           resp: [
             'Full stack RoR developer with emphasis on UI/UX',
-            'Revamped user dashboard with interactive metrics',
+            'Revamped and redesigned recommendation dashboard with interactive metrics which led to over 30% increase in user engagements',
+            'Led i18n integration efforts for the Rails app; worked closely with a 3rd-party translation agency',
+            'Single handedly translated the entire software stack into Traditional Chinese as part of the i18n effort'
           ],
-          tools: 'handlebars.js, highcharts.js, i18n.js, Javascript, Postgres, Ruby on Rails, Wordpress',
+          tools: 'handlebars.js, highcharts.js, i18n.js, Javascript, Postgres, Ruby on Rails, WordPress',
           services: 'AWS, Github, Stripe'
         }
       },
       {
         company: 'Gazillion Entertainment',
-        title: 'Lead UI Engineer, Platform Services',
+        title: 'Lead UI Engineer',
         location: 'San Mateo, CA',
         date: 'Nov 2009 - Jul 2011',
         desc: {
-          info: '',
+          info: 'I was part of the platform services team as a frontend engineering lead',
           resp: [
-            'UI platform engineering lead',
-            'Devised a payment prototype that bypassed costly PCI certification',
-            'Lead efforts on CDN deployment for Wordpress, Flash and other front-end assets',
+            'Led platform development for *heroup.com* — launched on 04.2011',
+            'Primary developer on *amazingsociety.com* — launched on 02.2011',
+            'UI lead for platform efforts on *Kung Fu Panda World* — launched in 2010',
+            'Devised a payment prototype that avoided costly PCI compliance protocols (this was before Stripe was popular)',
+            'Lead efforts on CDN deployment for WordPress, Flash and other frontend assets',
           ],
-          tools: 'Flash/AS3, Javascript, LAMP stack, Perforce, Wordpress, TestTrack',
+          tools: 'ActionScript, Flash, Javascript, LAMP stack, Perforce, WordPress, TestTrack',
           services: 'AWS S3/Cloudfront'
         }
       },
@@ -139,10 +171,10 @@ export default function () {
         desc: {
           info: 'Web-based education supplement for "tweens", winner of People\'s Choice Award at DEMO \'09 and NAPPA Gold Winner 2009',
           resp: [
-            'Lead developer for marketing, payment and on-boarding flows',
-            'Key contributor to paid content in Flash/AS3',
+            'Lead frontend developer for marketing, payment and on-boarding flows',
+            'Key contributor to paid content written in ActionScript and Flash',
           ],
-          tools: 'Flash/AS3, Javascript, JSP, Perforce, TestTrack',
+          tools: 'ActionScript, Flash, Javascript, JSP, Perforce, TestTrack',
           services: ''
         }
       },
@@ -157,19 +189,52 @@ export default function () {
             'Meet and spec projects with clients',
             'End-to-end full service web development',
           ],
-          tools: 'Flash/AS3, Javascript, LAMP stack, webDAV, Wordpress',
+          tools: 'ActionScript, Flash, Javascript, LAMP stack, webDAV, WordPress',
           services: ''
         }
       }
     ],
     education: [
-      { school: 'Savannah College of Art & Design', degree: 'MFA, Interactive Design & Game Development', location: 'Savannah, GA', distinctions: ['Presidential Fellowship recipient'] },
-      { school: 'Savannah College of Art & Design', degree: 'BFA, Computer Art', location: 'Savannah, GA', distinctions: ['Outstanding portfolio scholarship recipient', 'Received five prestigious student leadership awards'] },
-      { school: 'UC Santa Cruz Extension', degree: 'Certificate, Unix/Linux System Management & Administration', location: 'Cupertino, CA', distinctions: [] }
+      {
+        school: 'Savannah College of Art & Design',
+        degree: 'MFA, Interactive Design & Game Development',
+        location: 'Savannah, GA',
+        distinctions: [
+          'Presidential Fellowship recipient',
+        ],
+      },
+      {
+        school: 'Savannah College of Art & Design',
+        degree: 'BFA, Computer Art',
+        location: 'Savannah, GA',
+        distinctions: [
+          'Outstanding portfolio scholarship recipient',
+          'Received *five* prestigious student leadership awards',
+        ],
+      },
+      {
+        school: 'UC Santa Cruz Extension',
+        degree: 'Certificate, Unix/Linux System Management & Administration',
+        location: 'Cupertino, CA',
+        distinctions: [],
+      }
     ],
     volunteer: [
-      { cause: 'ACM SIGGRAPH', title: 'Paper Submission Jury', date: '2015-2017' },
-      { cause: 'Code enhancements & fixes to various projects on Github', title: 'OSS Contributor', date: '2016-present' }
+      {
+        cause: 'ACM SIGGRAPH',
+        title: 'Paper Submission Jury',
+        date: '2015-2017',
+      },
+      {
+        cause: 'Code enhancements & fixes to various projects on Github',
+        title: 'OSS Contributor',
+        date: '2016-present',
+      },
+      {
+        cause: 'Helped with technique demonstrations and instructions for teen\'s class',
+        title: 'Brazilian Jiujitsu Assistant Instructor',
+        date: '2019',
+      }
     ],
     social_media: [
       { name: 'Github', url: 'https://github.com/shunchu/' },

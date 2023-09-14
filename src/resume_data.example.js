@@ -5,6 +5,7 @@ export default function () {
       email: '',
       phone: '504.555.0666'
     },
+    intro: 'Did much. Achieved much. No regrets.',
     experiences: [
       {
         company: 'Vango',
