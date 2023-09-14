@@ -6,7 +6,7 @@
           <tr>
             <td>&nbsp;</td>
             <td class="left-padding">
-              <my-headline v-bind:name="name" v-bind:contact="contact"></my-headline>
+              <my-headline v-bind:name="name" v-bind:contact="contact" v-bind:intro="intro"></my-headline>
             </td>
           </tr>
 
@@ -16,11 +16,8 @@
             </td>
             <td class="text-left">
               <ul>
-                <my-experience
-                  v-for="(experience, index) in experiences"
-                  v-bind:experience="experience"
-                  v-bind:key="index"
-                ></my-experience>
+                <my-experience v-for="(experience, index) in experiences" v-bind:experience="experience"
+                  v-bind:key="index"></my-experience>
               </ul>
             </td>
           </tr>
@@ -53,11 +50,8 @@
             </td>
             <td class="text-left">
               <ul>
-                <my-social-media
-                  v-for="(medium, index) in social_media"
-                  v-bind:medium="medium"
-                  v-bind:key="index"
-                ></my-social-media>
+                <my-social-media v-for="(medium, index) in social_media" v-bind:medium="medium"
+                  v-bind:key="index"></my-social-media>
               </ul>
             </td>
           </tr>
@@ -148,11 +142,11 @@ table tr:first-child td {
   border-top: none;
 }
 
-td > ul > li:first-child {
+td>ul>li:first-child {
   padding: 0;
 }
 
-td > ul > li {
+td>ul>li {
   list-style-type: none;
   padding: 15px 0 0 0;
 }

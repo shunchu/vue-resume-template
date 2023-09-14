@@ -7,13 +7,14 @@
       <div class="email">{{ contact.email }}</div>
       <div class="phone">{{ contact.phone }}</div>
     </div>
+    <p>{{ intro }}</p>
   </div>
 </template>
 
 <script>
 export default {
   name: "headline",
-  props: ["contact", "name"]
+  props: ["contact", "intro", "name"]
 };
 </script>
 
