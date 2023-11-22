@@ -3,9 +3,9 @@ export default function () {
     name: 'Shun Chu',
     contact: {
       email: 'shun.chu@gmail.com',
-      phone: '408.940.5885'
+      phone: '408.219.7027'
     },
-    intro: 'With an MFA in Interaction Design & Game Development, Shun has spent his career crafting delightful user experiences. His keen eyes on UI/UX was quickly recognized early on in his engineering career, and he\'s been instrumental in leadership and contributor roles in organizations of all sizes ever since.',
+    intro: 'With an MFA in Interaction Design & Game Development, Shun has spent his career crafting delightful user experiences. His keen eye on UI/UX was quickly recognized early on in his engineering career, and he\'s been instrumental in leadership and contributor roles in organizations of all sizes ever since.',
     experiences: [
       {
         company: 'IGS Solutions, LLC',
@@ -15,11 +15,11 @@ export default function () {
         desc: {
           info: 'I was brought on as the first frontend engineer to establish UI/UX patterns and best practices for the team',
           resp: [
-            'Collaborated with the design lead and orchestrated a design language system on everything from typography, colors to standardized component development using TailwindCSS and web component design concepts',
-            'Working with the inventory team and an inventory manager, we designed and implemented a working prototype of an infinitely more efficient inventory management flow',
-            'Used primarily only Rails Hotwire and Stimulus technologies without Javascript SPA overhead for internal tools'
+            'Collaborated with the design lead to orchestrate a design language system on everything from typography, colors to standardized component development using TailwindCSS and web component design concepts',
+            'Working with the inventory team, we designed and implemented a working prototype of an infinitely more efficient inventory management flow',
+            'Used primarily only Rails Hotwire and Stimulus technologies without Javascript SPA overhead'
           ],
-          tools: 'Hotwire/Stimulus, Postgres, Ruby on Rails, TailwindCSS',
+          tools: 'Hotwire/Stimulus, PostgreSQL, Ruby on Rails, TailwindCSS',
         },
       },
       {
@@ -31,9 +31,9 @@ export default function () {
           info: 'Customer Sales engineering lead with emphasis on customer experience and revenue growth',
           resp: [
             'Led a talented team of full-stack developers responsible for growing customer sales during expert in-visit sessions',
-            'We successfully launched Asurion Product Catalog which drove a noticeable increase in RPV (revenue per visit) of almost 12% when it\'s used',
+            'We successfully launched Asurion Product Catalog which drove noticeable increases in RPV (revenue per visit) of almost 12% when it\'s used',
             'Coordinated Customer Sales engineering priorities and effectively integrated our (formerly Enjoy) team into the Asurion tech stack across Asurion\'s expansive engineering org',
-            'Collaborated with peer tech leads to mitigate and resolve system-wide high priority tech debts that impacted risky software dependency upgrades',
+            'Collaborated with other team leads to mitigate and resolve system-wide high priority tech debts that impacted risky software dependencies',
           ],
         }
       },
@@ -48,11 +48,11 @@ export default function () {
             'Assisted, owned and built a number of Enjoy\'s web properties',
             'Complete ownership of the Live Catalog product with +90% test coverage',
             'When Live Catalog launched, we saw a 50% bump in overall attach rates (additionally, +160% in hardware/accessories and +20% in insurance/services)',
-            'Spearheaded Enjoy\'s i18n integration on frontend applications',
+            'Spearheaded Enjoy\'s i18n integration on all frontend applications',
             'Advocated for and was part of UI/UX core working group implementing Enjoy\'s design language system',
             'Mentored, onboarded and paired with other frontend developers',
           ],
-          tools: 'Fullstory, i18next.js, Jest, Postgres, React JS, Ruby on Rails, TailwindCSS, Testing Library, Typescript... etc.',
+          tools: 'Fullstory, i18next.js, Jest, PostgreSQL, React JS, Ruby on Rails, TailwindCSS, Testing Library, Typescript... etc.',
         }
       },
       {
@@ -65,10 +65,10 @@ export default function () {
           resp: [
             'Full-stack software development and consulting',
             'Technical consulting to achieve business objectives',
-            'Chef and DevOps consulting',
+            'Chef and DevOps consulting and implementation',
             'Browser extensions authoring',
           ],
-          tools: 'Chef, Docker, Express JS, Postgres, React JS, Ruby on Rails, VueJS, WordPress',
+          tools: 'Chef, Docker, Express JS, PostgreSQL, React JS, Ruby on Rails, VueJS, WordPress',
           services: 'CircleCI, Github, Gitlab, Optimizely, Shopify, Trello, Twilio'
         }
       },
@@ -78,20 +78,20 @@ export default function () {
         location: 'Dallas, TX (Remote)',
         date: 'Sept 2014 - Aug 2017',
         desc: {
-          info: 'We pioneered a leads management software developed especially to tackle the unique challenges of the insurance sales industry',
+          info: 'We pioneered a leads/prospects management software developed especially to tackle the unique challenges of the insurance sales industry',
           resp: [
-            'Founding engineer with leadership role for the engineering org',
+            'Founding engineer with leadership role for the engineering org; selected Ruby on Rails as framework of choice to build the platform on',
             'Acting scrum master & authored technical and product specs to meet business needs',
             'Built and led a diverse engineering team that spanned across multiple international time zones',
-            'Built a data ingestion engine integrated with Texas DMV data pipeline',
-            'Designed and built data-rich ranking dashboard using internal recommendation algorithms for most valuable leads and prospects most likely to close',
+            'Built a data ingestion engine integrated with Texas DMV data API for weekly data updates',
+            'Designed and built data-rich ranking dashboard using internal recommendation algorithms for most valuable leads/prospects most likely to close',
             'Full Twilio SMS integration for agents to consolidate communications with leads/prospects within the platform',
             'Stripe subscription payment system integration',
             'The service increased "lead to sales" conversion by a whopping 23% for agents using the platform -- a number so staggering that led to systems integration discussions with one of the major insurance players in the industry',
             'Today, over 25% of Farmers insurance\'s top agencies use the platform',
             'Bootstrapped and developed deployment pipeline using Chef and AWS',
           ],
-          tools: 'Chef, Ember.js, Postgres, Ruby on Rails, Sinatra',
+          tools: 'Chef, Ember.js, PostgreSQL, Ruby on Rails, Sinatra',
           services: 'AWS (ElastiCache, OpsWorks, RDS, S3, SQS… etc), CircleCI, Github, Rollbar, Stripe, Texas DMV data service, Trello, Twilio'
         }
       },
@@ -106,8 +106,8 @@ export default function () {
             'Frontend/UI developer with occasional trips to the Rails land',
             'Authored and maintained a series of Chef cookbooks (with +90% test coverage) for DMP machines (production on-site hardware) and EC2-based instances (beta environments) using DevOps best practices',
             'Active contributor to company-wide Chef cookbooks',
-            'Helped train DMP colleagues on the Chef ways',
-            'Led iOS SDK efforts and worked closely with enterprise customers that deploy the SDK to ensure smooth integration',
+            'Helped train colleagues on the Chef ways for knowledge and resource redundancy',
+            'Led iOS SDK efforts and provided support to enterprise customers that integrated with the SDK',
           ],
           tools: 'Backbone.js, Chef, MySQL, Objective-C, Ruby on Rails',
           services: 'Airbrake, AWS, Chef Enterprise, Confluence, Github'
@@ -121,10 +121,11 @@ export default function () {
         desc: {
           info: 'Utilizing iPhone\'s camera to detect and measure blood pressure; accepted into Stanford Motwani Labs mentorship program',
           resp: [
-            'Technical co-founder; Ruby on Rails, web and iOS developer responsible for most of the software development stack',
+            'Technical co-founder',
+            'Built supporting APIs and platform and website using Ruby on Rails; architected the base iOS app with Objective-C',
             'User-informed research & business development',
           ],
-          tools: 'Objective-C (iOS client), Postgres, Ruby on Rails (services)',
+          tools: 'Objective-C (iOS client), PostgreSQL, Ruby on Rails (services)',
           services: 'AWS EC2, Github, SendGrid, Trello'
         }
       },
@@ -136,12 +137,12 @@ export default function () {
         desc: {
           info: 'YC-funded SaaS SEO recommendation engine',
           resp: [
-            'Full stack RoR developer with emphasis on UI/UX',
+            'Full stack Ruby on Rails developer with emphasis on UI/UX',
             'Revamped and redesigned recommendation dashboard with interactive metrics which led to over 30% increase in user engagements',
-            'Led i18n integration efforts for the Rails app; worked closely with a 3rd-party translation agency',
-            'Single handedly translated the entire software stack into Traditional Chinese as part of the i18n effort'
+            'Led i18n integration efforts for the Rails app; worked closely with a 3rd-party translation agency to ensure smooth delivery of translation files into Rails platform',
+            'Single-handedly provided Traditional Chinese translations for the entire software stack as part of the i18n effort'
           ],
-          tools: 'handlebars.js, highcharts.js, i18n.js, Javascript, Postgres, Ruby on Rails, WordPress',
+          tools: 'handlebars.js, highcharts.js, i18n.js, Javascript, PostgreSQL, Ruby on Rails, WordPress',
           services: 'AWS, Github, Stripe'
         }
       },
