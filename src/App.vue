@@ -1,12 +1,12 @@
 <template>
-  <div id="app container">
+  <div id="app">
     <div class="col-md-12">
       <table class="table">
         <tbody>
           <tr>
             <td>&nbsp;</td>
             <td class="left-padding">
-              <my-headline v-bind:name="name" v-bind:contact="contact"></my-headline>
+              <my-headline v-bind:name="name" v-bind:contact="contact" v-bind:intro="intro"></my-headline>
             </td>
           </tr>
 
@@ -16,11 +16,8 @@
             </td>
             <td class="text-left">
               <ul>
-                <my-experience
-                  v-for="(experience, index) in experiences"
-                  v-bind:experience="experience"
-                  v-bind:key="index"
-                ></my-experience>
+                <my-experience v-for="(experience, index) in experiences" v-bind:experience="experience"
+                  v-bind:key="index"></my-experience>
               </ul>
             </td>
           </tr>
@@ -53,11 +50,8 @@
             </td>
             <td class="text-left">
               <ul>
-                <my-social-media
-                  v-for="(medium, index) in social_media"
-                  v-bind:medium="medium"
-                  v-bind:key="index"
-                ></my-social-media>
+                <my-social-media v-for="(medium, index) in social_media" v-bind:medium="medium"
+                  v-bind:key="index"></my-social-media>
               </ul>
             </td>
           </tr>
@@ -95,16 +89,32 @@ export default {
   body {
     height: 100%;
     margin: 0;
-    font-size: 12pt;
+    font-size: 0.65rem;
+  }
+
+  h5 {
+    font-size: 0.9rem;
   }
 
   h6 {
-    font-size: 0.9rem;
+    font-size: 0.75rem;
+    font-weight: bolder;
+    text-decoration: underline;
+    text-underline-position: under;
+  }
+
+  table {
+    page-break-inside: auto;
+  }
+
+  tr {
+    page-break-inside: auto;
+    page-break-after: auto;
   }
 
   td:first-child {
     text-align: left;
-    width: 120px;
+    width: 100px;
   }
 }
 
@@ -112,7 +122,6 @@ export default {
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
     color: #747474;
     margin: 40px 30px;
     font-size: 15px;
@@ -133,11 +142,11 @@ table tr:first-child td {
   border-top: none;
 }
 
-td > ul > li:first-child {
+td>ul>li:first-child {
   padding: 0;
 }
 
-td > ul > li {
+td>ul>li {
   list-style-type: none;
   padding: 15px 0 0 0;
 }
