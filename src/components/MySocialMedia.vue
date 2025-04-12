@@ -1,7 +1,7 @@
 <template>
   <li>
     <strong>{{ sm.name }}:</strong>
-    <a :href="sm.url" target="_blank" class="text-blue-600 hover:text-blue-800 pl-2 hover:underline">
+    <a :href="sm.url" target="_blank" class="text-blue-600 hover:text-blue-800 pl-2 hover:underline text-sm">
       {{ sm.url }}
     </a>
   </li>
