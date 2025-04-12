@@ -5,7 +5,7 @@ export default function () {
       email: 'shun.chu@gmail.com',
       phone: '408.219.7027'
     },
-    intro: 'Leveraging an MFA in "Interaction Design & Game Development", I specialize in crafting delightful user experiences. My recognized UI/UX expertise has driven success in both leadership and contributor roles across diverse organizations.',
+    intro: 'Leveraging an MFA in "Interaction Design & Game Development", I craft delightful user experiences. My recognized UI/UX expertise propels success in both leadership and contributor roles.',
     experiences: [
       {
         company: 'IGS Solutions, LLC',
@@ -15,9 +15,9 @@ export default function () {
         desc: {
           info: 'Established foundational UI/UX patterns and best practices as the first frontend hire.',
           resp: [
-            'Collaborated with design lead on a design system for standardized components using TailwindCSS and Web Components.',
-            'Designed and prototyped a more efficient inventory management flow with the inventory team.',
-            'Utilized Rails Hotwire/Stimulus, eliminating JS SPA overhead.'
+            'Collaborated on a standardized design system using TailwindCSS and Web Components.',
+            'Designed a more efficient inventory management flow with the team.',
+            'Leveraged Rails Hotwire/Stimulus to eliminate JS SPA overhead.'
           ],
           tools: 'Hotwire/Stimulus, PostgreSQL, Ruby on Rails, TailwindCSS',
         },
@@ -30,10 +30,10 @@ export default function () {
         desc: {
           info: 'Led Customer Sales engineering team, focusing on CX and revenue growth.',
           resp: [
-            'Led full-stack team driving customer sales growth during expert visits.',
-            'Launched Asurion Product Catalog, increasing RPV by ~12%.',
-            'Coordinated engineering priorities and integrated former Enjoy team into Asurion tech stack.',
-            'Resolved high-priority system-wide tech debts impacting critical dependencies with other tech leads.',
+            'Led full-stack team driving sales during expert visits.',
+            'Launched Asurion Product Catalog, boosting RPV by ~12%.',
+            'Integrated former Enjoy team into Asurion tech stack and coordinated priorities.',
+            'Resolved critical tech debt impacting key dependencies.'
           ],
         }
       },
@@ -45,12 +45,10 @@ export default function () {
         desc: {
           info: 'Full-stack software developer contributing to multiple web properties.',
           resp: [
-            'Owned and built several Enjoy web properties.',
-            'Owned Live Catalog product development (+90% test coverage).',
-            'Live Catalog launch resulted in a 50% overall attach rate increase (+160% hardware, +20% services).',
-            'Spearheaded frontend internationalization (i18n) integrations.',
-            'Advocated for and contributed to UI/UX core working group implementing Enjoy\'s design system.',
-            'Mentored, onboarded, and paired with frontend developers.',
+            'Owned and built Enjoy web properties; led Live Catalog with 90%+ test coverage.',
+            'Launched Live Catalog, increasing attach rates by 50% overall (hardware +160%, services +20%).',
+            'Spearheaded frontend i18n and contributed to implementing Enjoy’s design system.',
+            'Mentored and onboarded frontend developers.'
           ],
           tools: 'Fullstory, i18next.js, Jest, PostgreSQL, React JS, Ruby on Rails, TailwindCSS, Testing Library, Typescript... etc.',
         }
@@ -63,10 +61,9 @@ export default function () {
         desc: {
           info: 'Provided scoping, architecture, and hands-on development consulting for clients (AAHomestays, Alderwood, Enjoy, etc.).',
           resp: [
-            'Full-stack software development and technical consulting.',
-            'Technical consulting focused on achieving business goals.',
+            'Full-stack software development and technical consulting to drive business goals.',
             'Chef/DevOps consulting and implementation.',
-            'Authored browser extensions.',
+            'Authored browser extensions.'
           ],
           tools: 'Chef, Docker, Express JS, PostgreSQL, React JS, Ruby on Rails, VueJS, WordPress',
           services: 'CircleCI, Github, Gitlab, Optimizely, Shopify, Trello, Twilio'
@@ -80,16 +77,9 @@ export default function () {
         desc: {
           info: 'Pioneered leads/prospects management software tailored for the insurance sales industry.',
           resp: [
-            'Founding engineer; led engineering org and selected Ruby on Rails framework.',
-            'Acted as scrum master; authored technical/product specs.',
-            'Built and led a diverse, multi-timezone engineering team.',
-            'Integrated Texas DMV data via weekly ingestion engine.',
-            'Built lead ranking dashboard using recommendation algorithms to identify high-value prospects.',
-            'Integrated Twilio SMS for in-platform lead communication.',
-            'Integrated Stripe subscription payments.',
-            'Increased lead-to-sales conversion by 23%, leading to major industry integration talks.',
-            'Platform adopted by over 25% of top Farmers Insurance agencies in Texas.',
-            'Created scalable deployment pipeline using Chef and AWS.',
+            'Founding & Leadership: Founded and led the engineering organization, selecting Ruby on Rails and building a diverse, multi-timezone team while serving as scrum master and authoring technical/product specs.',
+            'Integrations & Infrastructure: Developed integrations for Texas DMV data, Twilio SMS, and Stripe payments; created a scalable Chef and AWS deployment pipeline.',
+            'Data-Driven Impact: Built a lead ranking dashboard using recommendation algorithms, increasing lead-to-sales conversion by 23% and sparking major industry integration talks, with the platform adopted by over 25% of top Farmers Insurance agencies in Texas.',
           ],
           tools: 'Chef, Ember.js, PostgreSQL, Ruby on Rails, Sinatra',
           services: 'AWS (ElastiCache, OpsWorks, RDS, S3, SQS… etc), CircleCI, Github, Rollbar, Stripe, Texas DMV data service, Trello, Twilio'
@@ -103,11 +93,8 @@ export default function () {
         desc: {
           info: 'Software engineer on DMP (Data Management Platform) team.',
           resp: [
-            'Frontend/UI developer, occasional Rails work.',
-            'Authored/maintained Chef cookbooks (+90% test coverage) for DMP hardware & EC2 beta environments.',
-            'Contributed to company-wide Chef cookbooks.',
-            'Trained colleagues on Chef for knowledge sharing.',
-            'Led iOS SDK efforts & supported enterprise customer integrations.',
+            'Frontend/UI developer with occasional Rails work, leading iOS SDK initiatives and supporting enterprise integrations.',
+            'Authored and maintained Chef cookbooks for DMP hardware & EC2 beta environments (90%+ test coverage), contributed to company-wide Chef cookbooks, and trained colleagues on Chef.'
           ],
           tools: 'Backbone.js, Chef, MySQL, Objective-C, Ruby, Rails',
           services: 'Airbrake, AWS, Chef Enterprise, Confluence, Github'
@@ -137,10 +124,8 @@ export default function () {
         desc: {
           info: 'Lead UI Engineer for YC-funded SaaS SEO recommendation engine.',
           resp: [
-            'Full-stack Rails developer focused on UI/UX.',
-            'Redesigned recommendation dashboard, increasing user engagement >30%.',
-            'Led Rails i18n integration, coordinating with 3rd-party translation agency.',
-            'Sole Traditional Chinese translator.'
+            'Full-stack Rails developer focused on UI/UX; redesigned recommendation dashboard to boost user engagement by over 30%.',
+            'Led Rails i18n integration with a 3rd-party translation agency and served as the sole Traditional Chinese translator.'
           ],
           tools: 'handlebars.js, highcharts.js, i18n.js, Javascript, PostgreSQL, Ruby on Rails, WordPress',
           services: 'AWS, Github, Stripe'
@@ -154,11 +139,9 @@ export default function () {
         desc: {
           info: 'Lead UI Engineer on platform services team.',
           resp: [
-            'UI lead for *Kung Fu Panda World* (launched 2010).',
-            'Primary developer for *amazingsociety.com* (launched Feb 2011).',
-            'Led platform development for *heroup.com* (launched Apr 2011).',
-            'Developed payment prototype avoiding PCI compliance costs.',
-            'Facilitated CDN deployment for various assets.',
+            'Led UI and platform development for key launches: *Kung Fu Panda World* (2010), *amazingsociety.com* (Feb 2011), and *heroup.com* (Apr 2011).',
+            'Engineered a payment prototype that avoided PCI compliance costs.',
+            'Optimized asset delivery through CDN deployment.',
           ],
           tools: 'ActionScript, Flash, Javascript, LAMP stack, Perforce, WordPress, TestTrack',
           services: 'AWS S3/Cloudfront'
