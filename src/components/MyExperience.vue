@@ -1,60 +1,33 @@
 <template>
-  <li class="experience">
-    <h6>
-      {{ experience.title }}, {{ experience.company }}, {{ experience.location }}
-    </h6>
-
-    <div class="date">{{ experience.date }}</div>
-
-    <div class="details">
-      <div v-if="experience.desc.info">
-        <div>{{ experience.desc.info }}</div>
-      </div>
-
-      <div v-if="experience.desc.resp">
-        <ul class="resp">
-          <li v-for="resp in experience.desc.resp">{{ resp }}</li>
-        </ul>
-      </div>
-
-      <div v-if="experience.desc.tools">
-        <div class="tools">
-          <strong>Tools:</strong> {{ experience.desc.tools }}
-        </div>
-      </div>
-
-      <div v-if="experience.desc.services">
-        <div class="services">
-          <strong>3rd-party Services:</strong> {{ experience.desc.services }}
-        </div>
-      </div>
+  <li>
+    <div class="bg-gray-100 px-2 py-1 text-lg">
+      <strong>{{ experience.title }}</strong>, {{ experience.company }}, {{ experience.location }}
+    </div>
+    <div class="date text-base text-gray-600 mb-1 px-2">
+      {{ experience.date }}
+    </div>
+    <div class="details mb-2 text-base px-2" v-if="experience.desc.info">
+      {{ experience.desc.info }}
+    </div>
+    <div v-if="experience.desc.resp && experience.desc.resp.length > 0">
+      <ul class="resp mb-2 text-base p-0 m-0 px-2 pl-5 list-inside list-[circle]">
+        <li class="mb-1" v-for="(respItem, index) in experience.desc.resp" v-bind:key="index">{{ respItem }}</li>
+      </ul>
+    </div>
+    <div class="tools text-base text-gray-500 mb-2 px-2" v-if="experience.desc.tools">
+      <strong>Tools:</strong> {{ experience.desc.tools }}
+    </div>
+    <div class="services text-base text-gray-500 px-2" v-if="experience.desc.services">
+      <strong>Services:</strong> {{ experience.desc.services }}
     </div>
   </li>
 </template>
 
 <script>
-  export default {
-    name: 'experience',
-    props: ['experience']
-  }
+export default {
+  props: ['experience'],
+};
 </script>
 
 <style scoped>
-h6 {
-  background: #ebebeb;
-  border-radius: 4px;
-  padding: 3px 8px;
-}
-
-ul {
-  padding: 0 0 0 18px;
-}
-
-.date {
-  padding: 0 0 0 15px;
-}
-
-.details {
-  margin: 0 0 0 15px;
-}
 </style>

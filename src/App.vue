@@ -1,57 +1,56 @@
 <template>
-  <div id="app">
-    <div class="col-md-12">
-      <table class="table">
+  <div id="app" class="p-8 font-sans text-gray-700 leading-normal">
+    <div class="w-full">
+      <table class="w-full mb-4 border-collapse">
         <tbody>
           <tr>
-            <td>&nbsp;</td>
-            <td class="left-padding">
+            <td class="w-[200px] pt-4 pb-4 border-t-0">&nbsp;</td>
+            <td class="pl-0 pt-4 pb-4 border-t-0">
               <my-headline v-bind:name="name" v-bind:contact="contact" v-bind:intro="intro"></my-headline>
             </td>
           </tr>
 
           <tr>
-            <td>
-              <h5>Experience</h5>
+            <td class="pt-4 pb-4 border-t border-gray-300 align-top">
+              <h5 class="text-2xl font-semibold mb-2">Experience</h5>
             </td>
-            <td class="text-left">
-              <ul>
-                <my-experience v-for="(experience, index) in experiences" v-bind:experience="experience"
-                  v-bind:key="index"></my-experience>
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left">
+              <ul class="list-none p-0">
+                <my-experience class="mb-4 last:mb-0" v-for="(experience, index) in experiences" v-bind:experience="experience"
+                  v-bind:key="'exp-' + index"></my-experience>
               </ul>
             </td>
           </tr>
 
           <tr>
-            <td>
-              <h5>Education</h5>
+            <td class="pt-4 pb-4 border-t border-gray-300 align-top">
+              <h5 class="text-2xl font-semibold mb-2">Volunteer</h5>
             </td>
-            <td class="text-left">
-              <ul>
-                <my-education v-for="(edu, index) in education" v-bind:edu="edu" v-bind:key="index"></my-education>
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left">
+              <ul class="list-none p-0">
+                <my-volunteer class="mb-0 last:mb-0" v-for="(vol, index) in volunteer" v-bind:vol="vol" v-bind:key="'vol-' + index"></my-volunteer>
               </ul>
             </td>
           </tr>
 
           <tr>
-            <td>
-              <h5>Volunteer</h5>
+            <td class="pt-4 pb-4 border-t border-gray-300 align-top">
+              <h5 class="text-2xl font-semibold mb-2">Education</h5>
             </td>
-            <td class="text-left">
-              <ul>
-                <my-volunteer v-for="(vol, index) in volunteer" v-bind:vol="vol" v-bind:key="index"></my-volunteer>
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left">
+              <ul class="list-none p-0">
+                <my-education class="mb-4 last:mb-0" v-for="(edu, index) in education" v-bind:edu="edu" v-bind:key="'edu-' + index"></my-education>
               </ul>
             </td>
           </tr>
 
           <tr>
-            <td>
-              <h5>Social Media</h5>
+            <td class="pt-4 pb-4 border-t border-gray-300 align-top">
+              <h5 class="text-2xl font-semibold mb-2">Social Media</h5>
             </td>
-            <td class="text-left">
-              <ul>
-                <my-social-media v-for="(medium, index) in social_media" v-bind:medium="medium"
-                  v-bind:key="index"></my-social-media>
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left">
+              <ul class="list-none p-0">
+                <my-social-media class="mb-2 last:mb-0 px-2 pb-1 text-base" v-for="(sm, index) in socialMedia" v-bind:sm="sm" v-bind:key="'sm-' + index"></my-social-media>
               </ul>
             </td>
           </tr>
@@ -72,11 +71,11 @@ import MyVolunteer from "./components/MyVolunteer";
 export default {
   name: "app",
   components: {
-    MyEducation,
-    MyExperience,
     MyHeadline,
-    MySocialMedia,
-    MyVolunteer
+    MyExperience,
+    MyVolunteer,
+    MyEducation,
+    MySocialMedia
   },
   data() {
     return ResumeData();
@@ -85,78 +84,48 @@ export default {
 </script>
 
 <style>
-@media print {
-  body {
-    height: 100%;
-    margin: 0;
-    font-size: 0.65rem;
+  @media print {
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      @apply p-10 text-xs;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    #app {
+      @apply p-0 !important;
+    }
+
+    table {
+      @apply border-collapse w-full;
+      page-break-inside: auto;
+    }
+
+    tr {
+      @apply break-inside-avoid;
+      page-break-after: auto;
+    }
+
+    td {
+      @apply p-2 align-top border-t border-gray-300 break-inside-avoid;
+    }
+
+    td:first-child {
+      @apply w-[100px] !important;
+    }
+
+    h5 {
+      @apply text-lg break-after-avoid;
+    }
+
+    ul, img {
+      @apply break-inside-avoid;
+    }
+
+    /* Hide elements not needed for print if necessary */
   }
-
-  h5 {
-    font-size: 0.9rem;
-  }
-
-  h6 {
-    font-size: 0.75rem;
-    font-weight: bolder;
-    text-decoration: underline;
-    text-underline-position: under;
-  }
-
-  table {
-    page-break-inside: auto;
-  }
-
-  tr {
-    page-break-inside: auto;
-    page-break-after: auto;
-  }
-
-  td:first-child {
-    text-align: left;
-    width: 100px;
-  }
-}
-
-@media screen {
-  body {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: #747474;
-    margin: 40px 30px;
-    font-size: 15px;
-  }
-
-  td:first-child {
-    text-align: left;
-    width: 200px;
-  }
-}
-
-body {
-  font-family: "Optima-Regular", "Optima", "Avenir", Helvetica, Arial,
-    sans-serif;
-}
-
-table tr:first-child td {
-  border-top: none;
-}
-
-td>ul>li:first-child {
-  padding: 0;
-}
-
-td>ul>li {
-  list-style-type: none;
-  padding: 15px 0 0 0;
-}
-
-td.left-padding {
-  clear: both;
-  padding-left: 50px;
-}
-
-h6 {
-  font-weight: bolder;
-}
 </style>

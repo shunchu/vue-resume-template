@@ -1,18 +1,17 @@
 <template>
-  <li class="social-media">
-    <strong>{{ medium.name }}:</strong> <a :href="medium.url" target="_blank">{{ medium.url }}</a>
+  <li>
+    <strong>{{ sm.name }}:</strong>
+    <a :href="sm.url" target="_blank" class="text-blue-600 hover:text-blue-800 pl-2 hover:underline">
+      {{ sm.url }}
+    </a>
   </li>
 </template>
 
 <script>
-  export default {
-    name: 'social-media',
-    props: ['medium']
-  }
+export default {
+  props: ['sm'],
+};
 </script>
 
 <style scoped>
-  li {
-    padding: 0;
-  }
 </style>

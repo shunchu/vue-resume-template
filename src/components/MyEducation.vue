@@ -1,20 +1,20 @@
 <template>
-  <li class="education">
-    <h6>{{ edu.school }}, {{ edu.location }}</h6>
-    <ul class="distinctions">
-      <li>{{ edu.degree }}</li>
-      <li v-for="dist in edu.distinctions">{{ dist }}</li>
-    </ul>
+  <li>
+    <div class="bg-gray-100 px-2 py-1 text-lg"><strong>{{ edu.school }}</strong>, {{ edu.location }}</div>
+    <div class="text-base mt-1 px-2">{{ edu.degree }}</div>
+    <div v-if="edu.distinctions && edu.distinctions.length > 0" class="mt-1">
+      <ul class="distinctions text-base text-gray-600 p-0 m-0 px-2 pl-5 list-inside list-[circle]">
+        <li class="mb-1" v-for="(distinction, index) in edu.distinctions" :key="index">{{ distinction }}</li>
+      </ul>
+    </div>
   </li>
 </template>
 
 <script>
-  export default {
-    name: 'education',
-    props: ['edu']
-  }
+export default {
+  props: ['edu'],
+};
 </script>
 
 <style scoped>
-
 </style>

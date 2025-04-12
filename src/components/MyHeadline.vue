@@ -1,13 +1,15 @@
 <template>
-  <div class="row">
-    <h1 class="col-8">
-      <strong>{{ name }}</strong>
+  <div class="flex flex-wrap">
+    <h1 class="w-2/3 text-5xl font-medium font-heading mb-10">
+      {{ name }}
     </h1>
-    <div class="col-4 text-end">
+    <div class="w-1/3 mb-10 text-right text-base">
       <div class="email">{{ contact.email }}</div>
       <div class="phone">{{ contact.phone }}</div>
     </div>
-    <p>{{ intro }}</p>
+    <div class="w-full mt-2">
+      <p class="text-lg">{{ intro }}</p>
+    </div>
   </div>
 </template>
 
@@ -18,11 +20,5 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1,
-h2 {
-  font-family: "Cochin", "Times New Roman", serif;
-  font-weight: normal;
-}
 </style>
