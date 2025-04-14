@@ -1,15 +1,12 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import tailwind from 'tailwindcss'
-import autoprefixer from 'autoprefixer'
+import UnoCSS from 'unocss/vite'
 
 export default defineConfig({
-  plugins: [vue()],
-  css: {
-    postcss: {
-      plugins: [tailwind(), autoprefixer()]
-    }
-  },
+  plugins: [
+    vue(),
+    UnoCSS()
+  ],
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -22,7 +19,7 @@ export default defineConfig({
   },
   server: {
     port: 3000,
-    open: true,
+    open: false,
     hmr: true
   }
 })

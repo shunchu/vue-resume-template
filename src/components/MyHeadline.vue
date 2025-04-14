@@ -21,4 +21,7 @@ export default {
 </script>
 
 <style scoped>
+h1 {
+  font-family: "Cochin", "Times New Roman";
+}
 </style>

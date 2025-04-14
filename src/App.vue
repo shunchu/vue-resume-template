@@ -4,7 +4,7 @@
       <table class="w-full mb-4 border-collapse">
         <tbody>
           <tr>
-            <td class="w-[200px] pt-2 pb-4 border-t-0">&nbsp;</td>
+            <td class="w-48 pt-2 pb-4 border-t-0">&nbsp;</td>
             <td class="pl-0 pt-2 pb-4 border-t-0">
               <my-headline v-bind:name="name" v-bind:contact="contact" v-bind:intro="intro"></my-headline>
             </td>
@@ -93,13 +93,13 @@ export default {
 
     /* Global print styles */
     body {
-      @apply text-xs;
+      font-size: 0.75rem;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
 
     #app {
-      @apply !p-0;
+      padding: 0;
     }
 
     /* Typography */
@@ -108,12 +108,17 @@ export default {
     }
 
     h5 {
-      @apply text-lg break-after-avoid mb-0 font-semibold;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 0;
+      break-after: avoid;
     }
 
     /* Table structure */
     table {
-      @apply border-collapse w-full table-auto;
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: auto;
       border-spacing: 0;
       margin: 0;
       page-break-inside: auto !important;
@@ -122,27 +127,29 @@ export default {
     tr {
       page-break-inside: auto;
       page-break-after: auto;
-      @apply p-0 m-0;
+      padding: 0;
+      margin: 0;
     }
 
     td {
-      @apply py-0 px-2 align-top border-t border-gray-300;
+      padding: 0 0.5rem;
+      border-top: 1px solid #ddd;
       page-break-inside: auto;
       vertical-align: top;
     }
 
     td:first-child {
-      @apply w-[100px] !important;
+      width: 12rem !important;
     }
 
     /* First row special handling */
     tr:first-child td {
-      @apply pt-0 pb-0 pl-2;
+      padding: 0 0.5rem;
     }
 
     /* Section headers */
     tr[data-section-start] td {
-      @apply pt-1;
+      padding-top: 0.25rem;
     }
 
     /* Experience section - avoid page break */
@@ -153,68 +160,73 @@ export default {
 
     /* Lists */
     ul, img {
-      @apply p-0 m-0;
+      padding: 0;
+      margin: 0;
       page-break-inside: auto;
     }
 
     li {
-      @apply m-0 p-0;
+      margin: 0;
+      padding: 0;
       page-break-inside: auto;
     }
 
     /* Component spacing */
     .mb-4 {
-      @apply mb-0;
+      margin-bottom: 0;
     }
 
     .mb-2 {
-      @apply mb-0;
+      margin-bottom: 0;
     }
 
     .mb-1 {
-      @apply mb-0;
+      margin-bottom: 0;
     }
 
     /* Table cell padding */
     tr td {
-      @apply pt-0 pb-0;
+      padding: 0 0.5rem;
     }
 
     /* Component spacing */
     .date, .details, .tools, .services {
-      @apply mb-0;
+      margin-bottom: 0;
     }
 
     /* List spacing */
     ul.resp, ul.distinctions {
-      @apply mb-0;
+      margin-bottom: 0;
     }
 
     /* Last row spacing */
     tr:last-child {
-      @apply pb-2;
+      padding-bottom: 0.5rem;
     }
 
     /* Component specific styles */
     .my-experience, .my-education, .my-volunteer {
-      @apply pb-0 mb-0;
+      padding-bottom: 0;
+      margin-bottom: 0;
       page-break-inside: auto;
     }
 
     .my-experience > div,
     .my-education > div,
     .my-volunteer > div {
-      @apply mb-0 pb-0;
+      margin-bottom: 0;
+      padding-bottom: 0;
     }
 
     /* Print-specific overrides for components */
     .bg-gray-100 {
-      @apply py-0;
+      padding: 0;
     }
 
     /* Link styling for print */
     a {
-      @apply text-black no-underline;
+      color: #000;
+      text-decoration: none;
     }
   }
 </style>

@@ -2,6 +2,8 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import Env from './env'
 import VueGtag from 'vue-gtag'
+import '@unocss/reset/tailwind.css';
+import 'virtual:uno.css'
 import './assets/css/main.css'
 
 const env = Env()
