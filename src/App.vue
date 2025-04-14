@@ -6,7 +6,7 @@
           <tr>
             <td class="w-48 pt-2 pb-4 border-t-0">&nbsp;</td>
             <td class="pl-0 pt-2 pb-4 border-t-0">
-              <my-headline v-bind:name="name" v-bind:contact="contact" v-bind:intro="intro"></my-headline>
+              <my-headline :name="name" :contact="contact" :intro="intro"></my-headline>
             </td>
           </tr>
 
@@ -16,8 +16,7 @@
             </td>
             <td class="pt-4 pb-4 border-t border-gray-300 text-left">
               <ul class="list-none p-0">
-                <my-experience class="mb-4 last:mb-0 my-experience" v-for="(experience, index) in experiences" v-bind:experience="experience"
-                  v-bind:key="'exp-' + index"></my-experience>
+                <my-experience class="mb-4 last:mb-0 my-experience" v-for="(experience, index) in experiences" :experience="experience" :key="'exp-' + index"></my-experience>
               </ul>
             </td>
           </tr>
@@ -28,7 +27,7 @@
             </td>
             <td class="pt-4 pb-4 border-t border-gray-300 text-left">
               <ul class="list-none p-0">
-                <my-volunteer class="mb-0 last:mb-0 my-volunteer" v-for="(vol, index) in volunteer" v-bind:vol="vol" v-bind:key="'vol-' + index"></my-volunteer>
+                <my-volunteer class="mb-0 last:mb-0 my-volunteer" v-for="(vol, index) in volunteer" :vol="vol" :key="'vol-' + index"></my-volunteer>
               </ul>
             </td>
           </tr>
@@ -39,7 +38,7 @@
             </td>
             <td class="pt-4 pb-4 border-t border-gray-300 text-left">
               <ul class="list-none p-0">
-                <my-education class="mb-4 last:mb-0 my-education" v-for="(edu, index) in education" v-bind:edu="edu" v-bind:key="'edu-' + index"></my-education>
+                <my-education class="mb-4 last:mb-0 my-education" v-for="(edu, index) in education" :edu="edu" :key="'edu-' + index"></my-education>
               </ul>
             </td>
           </tr>
@@ -50,7 +49,7 @@
             </td>
             <td class="pt-4 pb-4 border-t border-gray-300 text-left">
               <ul class="list-none p-0">
-                <my-social-media class="px-2 pb-1 text-base" v-for="(sm, index) in socialMedia" v-bind:sm="sm" v-bind:key="'sm-' + index"></my-social-media>
+                <my-social-media class="px-2 pb-1 text-base" v-for="(sm, index) in socialMedia" :sm="sm" :key="'sm-' + index"></my-social-media>
               </ul>
             </td>
           </tr>
@@ -93,13 +92,13 @@ export default {
 
     /* Global print styles */
     body {
-      font-size: 0.75rem;
+      @apply text-xs;
       -webkit-print-color-adjust: exact;
       print-color-adjust: exact;
     }
 
     #app {
-      padding: 0;
+      @apply !p-0;
     }
 
     /* Typography */
@@ -108,17 +107,12 @@ export default {
     }
 
     h5 {
-      font-size: 1rem;
-      font-weight: bold;
-      margin-bottom: 0;
-      break-after: avoid;
+      @apply text-lg break-after-avoid mb-0 font-semibold;
     }
 
     /* Table structure */
     table {
-      border-collapse: collapse;
-      width: 100%;
-      table-layout: auto;
+      @apply border-collapse w-full table-auto;
       border-spacing: 0;
       margin: 0;
       page-break-inside: auto !important;
@@ -127,29 +121,27 @@ export default {
     tr {
       page-break-inside: auto;
       page-break-after: auto;
-      padding: 0;
-      margin: 0;
+      @apply p-0 m-0;
     }
 
     td {
-      padding: 0 0.5rem;
-      border-top: 1px solid #ddd;
+      @apply py-0 px-2 align-top border-t border-gray-300;
       page-break-inside: auto;
       vertical-align: top;
     }
 
     td:first-child {
-      width: 12rem !important;
+      @apply w-[125px] !important;
     }
 
     /* First row special handling */
     tr:first-child td {
-      padding: 0 0.5rem;
+      @apply pt-0 pb-0 pl-2;
     }
 
     /* Section headers */
     tr[data-section-start] td {
-      padding-top: 0.25rem;
+      @apply pt-1;
     }
 
     /* Experience section - avoid page break */
@@ -160,73 +152,68 @@ export default {
 
     /* Lists */
     ul, img {
-      padding: 0;
-      margin: 0;
+      @apply p-0 m-0;
       page-break-inside: auto;
     }
 
     li {
-      margin: 0;
-      padding: 0;
+      @apply m-0 p-0;
       page-break-inside: auto;
     }
 
     /* Component spacing */
     .mb-4 {
-      margin-bottom: 0;
+      @apply mb-0;
     }
 
     .mb-2 {
-      margin-bottom: 0;
+      @apply mb-0;
     }
 
     .mb-1 {
-      margin-bottom: 0;
+      @apply mb-0;
     }
 
     /* Table cell padding */
     tr td {
-      padding: 0 0.5rem;
+      @apply pt-0 pb-0;
     }
 
     /* Component spacing */
     .date, .details, .tools, .services {
-      margin-bottom: 0;
+      @apply mb-0;
     }
 
     /* List spacing */
     ul.resp, ul.distinctions {
-      margin-bottom: 0;
+      @apply mb-0;
     }
 
     /* Last row spacing */
     tr:last-child {
-      padding-bottom: 0.5rem;
+      @apply pb-2;
     }
 
     /* Component specific styles */
     .my-experience, .my-education, .my-volunteer {
-      padding-bottom: 0;
-      margin-bottom: 0;
+      @apply pb-0 mb-0;
       page-break-inside: auto;
     }
 
     .my-experience > div,
     .my-education > div,
     .my-volunteer > div {
-      margin-bottom: 0;
-      padding-bottom: 0;
+      @apply mb-0 pb-0;
     }
 
     /* Print-specific overrides for components */
     .bg-gray-100 {
-      padding: 0;
+      @apply py-0;
     }
 
     /* Link styling for print */
     a {
-      color: #000;
-      text-decoration: none;
+      @apply text-black no-underline;
     }
   }
 </style>

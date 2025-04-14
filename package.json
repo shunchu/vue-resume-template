@@ -1,5 +1,6 @@
 {
   "name": "vue-resume-template",
+  "type": "module",
   "version": "1.3.0",
   "description": "Personal resume page builder",
   "author": "Shun Chu <shun.chu@gmail.com>",

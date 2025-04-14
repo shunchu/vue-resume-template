@@ -8,7 +8,7 @@
       <div class="phone">{{ contact.phone }}</div>
     </div>
     <div class="w-full mt-2">
-      <p class="text-sm">{{ intro }}</p>
+      <p class="intro text-sm">{{ intro }}</p>
     </div>
   </div>
 </template>
@@ -21,7 +21,4 @@ export default {
 </script>
 
 <style scoped>
-h1 {
-  font-family: "Cochin", "Times New Roman";
-}
 </style>

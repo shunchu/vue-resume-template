@@ -1,22 +1,17 @@
-import { defineConfig, presetUno, presetAttributify, transformerDirectives } from 'unocss'
-import presetWind from '@unocss/preset-wind'
+import { defineConfig, presetUno, presetTypography, transformerDirectives } from 'unocss'
 
 export default defineConfig({
   presets: [
-    presetWind({
-      dark: 'media',
-    }),
-    presetAttributify()
+    presetUno(),
+    presetTypography()
   ],
   transformers: [
-    transformerDirectives()
+    transformerDirectives() // Enable @apply
   ],
-  theme: {},
-  shortcuts: {
-    // Define any component-specific classes here
-    'date': 'text-sm text-gray-600',
-    'details': 'mb-2 text-sm px-2',
-    'tools': 'text-sm text-gray-500 mb-2 px-2',
-    'services': 'text-sm text-gray-500 px-2'
+  theme: {
+    fontFamily: {
+      heading: 'var(--font-heading)',
+      sans: 'var(--font-sans)'
+    }
   }
 })
