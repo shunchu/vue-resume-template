@@ -1,5 +1,5 @@
 import { createApp } from 'vue'
-import App from './App'
+import App from './App.vue'
 import Env from './env'
 import VueGtag from 'vue-gtag'
 import './assets/css/main.css'

@@ -62,11 +62,11 @@
 
 <script>
 import ResumeData from "./resume_data";
-import MyEducation from "./components/MyEducation";
-import MyExperience from "./components/MyExperience";
-import MyHeadline from "./components/MyHeadline";
-import MySocialMedia from "./components/MySocialMedia";
-import MyVolunteer from "./components/MyVolunteer";
+import MyEducation from "./components/MyEducation.vue";
+import MyExperience from "./components/MyExperience.vue";
+import MyHeadline from "./components/MyHeadline.vue";
+import MySocialMedia from "./components/MySocialMedia.vue";
+import MyVolunteer from "./components/MyVolunteer.vue";
 
 export default {
   name: "app",
