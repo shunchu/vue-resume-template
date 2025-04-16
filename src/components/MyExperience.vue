@@ -11,7 +11,7 @@
     </div>
     <div v-if="experience.desc.resp && experience.desc.resp.length > 0">
       <ul class="mb-2 text-sm p-0 m-0 px-2 pl-5 list-inside list-[circle]">
-        <li class="mb-1" v-for="(respItem, index) in experience.desc.resp" v-bind:key="index">{{ respItem }}</li>
+        <li class="list-circle-inside mb-1" v-for="(respItem, index) in experience.desc.resp" v-bind:key="index">{{ respItem }}</li>
       </ul>
     </div>
     <div class="text-sm text-gray-500 mb-2 px-2" v-if="experience.desc.tools">
