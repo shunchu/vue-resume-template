@@ -1,53 +1,53 @@
 <template>
-  <div id="app" class="p-8 font-sans text-gray-700 leading-normal">
-    <div class="w-full">
-      <table class="w-full mb-4 border-collapse">
+  <div id="app" class="p-4 sm:p-8 font-sans text-gray-700 leading-normal">
+    <div class="w-full max-w-3xl mx-auto">
+      <table class="w-full mb-4 border-collapse text-sm sm:text-base max-w-4xl">
         <tbody>
-          <tr>
-            <td class="w-48 pt-2 pb-4 border-t-0">&nbsp;</td>
+          <tr class="align-top flex flex-col sm:table-row">
+            <td class="w-full sm:w-56 min-w-[10rem] pt-2 pb-4 sm:p-0 border-t-0 flex-shrink-0">&nbsp;</td>
             <td class="pl-0 pt-2 pb-4 border-t-0">
               <my-headline :name="name" :contact="contact" :intro="intro"></my-headline>
             </td>
           </tr>
 
-          <tr data-section-start="experience">
-            <td class="pt-4 pb-4 border-t border-gray-300 align-top">
+          <tr data-section-start="experience" class="flex flex-col sm:table-row">
+            <td class="pt-4 pb-4 border-t border-gray-300 align-top w-full sm:w-56 min-w-[10rem] pr-2">
               <h5 class="text-lg font-semibold mb-1">Experience</h5>
             </td>
-            <td class="pt-4 pb-4 border-t border-gray-300 text-left">
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 sm:pl-4">
               <ul class="list-none p-0">
                 <my-experience class="mb-4 last:mb-0 my-experience" v-for="(experience, index) in experiences" :experience="experience" :key="'exp-' + index"></my-experience>
               </ul>
             </td>
           </tr>
 
-          <tr data-section-start="volunteer">
-            <td class="pt-4 pb-4 border-t border-gray-300 align-top">
+          <tr data-section-start="volunteer" class="flex flex-col sm:table-row">
+            <td class="pt-4 pb-4 border-t border-gray-300 align-top w-full sm:w-56 min-w-[10rem] pr-2">
               <h5 class="text-lg font-semibold mb-1">Volunteer</h5>
             </td>
-            <td class="pt-4 pb-4 border-t border-gray-300 text-left">
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 sm:pl-4">
               <ul class="list-none p-0">
                 <my-volunteer class="mb-0 last:mb-0 my-volunteer" v-for="(vol, index) in volunteer" :vol="vol" :key="'vol-' + index"></my-volunteer>
               </ul>
             </td>
           </tr>
 
-          <tr data-section-start="education">
-            <td class="pt-4 pb-4 border-t border-gray-300 align-top">
+          <tr data-section-start="education" class="flex flex-col sm:table-row">
+            <td class="pt-4 pb-4 border-t border-gray-300 align-top w-full sm:w-56 min-w-[10rem] pr-2">
               <h5 class="text-lg font-semibold mb-1">Education</h5>
             </td>
-            <td class="pt-4 pb-4 border-t border-gray-300 text-left">
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 sm:pl-4">
               <ul class="list-none p-0">
                 <my-education class="mb-4 last:mb-0 my-education" v-for="(edu, index) in education" :edu="edu" :key="'edu-' + index"></my-education>
               </ul>
             </td>
           </tr>
 
-          <tr data-section-start="social">
-            <td class="pt-4 pb-4 border-t border-gray-300 align-top">
+          <tr data-section-start="social" class="flex flex-col sm:table-row">
+            <td class="pt-4 pb-4 border-t border-gray-300 align-top w-full sm:w-56 min-w-[10rem] pr-2">
               <h5 class="text-lg font-semibold mb-1">Social Media</h5>
             </td>
-            <td class="pt-4 pb-4 border-t border-gray-300 text-left">
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 sm:pl-4">
               <ul class="list-none p-0">
                 <my-social-media class="px-2 pb-1 text-base" v-for="(sm, index) in socialMedia" :sm="sm" :key="'sm-' + index"></my-social-media>
               </ul>
@@ -214,6 +214,44 @@ export default {
     /* Link styling for print */
     a {
       @apply text-black no-underline;
+    }
+  }
+  @media (max-width: 640px) {
+    #app {
+      padding-top: 0.25rem;
+      padding-bottom: 0.5rem;
+      padding-left: 0.25rem;
+      padding-right: 0.25rem;
+    }
+    table {
+      font-size: 0.95rem;
+    }
+    td, th {
+      display: block;
+      width: 100% !important;
+      box-sizing: border-box;
+    }
+    tr {
+      display: flex;
+      flex-direction: column;
+    }
+    h5 {
+      margin-bottom: 0.5rem;
+    }
+    /* Remove extra padding from first td of first row on mobile */
+    tr:first-child > td:first-child {
+      padding-top: 0 !important;
+      padding-bottom: 0 !important;
+      min-height: 0 !important;
+    }
+  }
+  @media (min-width: 641px) {
+    tr {
+      display: table-row;
+    }
+    td, th {
+      display: table-cell;
+      width: auto !important;
     }
   }
 </style>

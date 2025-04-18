@@ -1,14 +1,16 @@
 <template>
-  <div class="flex flex-wrap">
-    <h1 class="w-2/3 text-5xl font-medium font-heading mb-4">
-      {{ name }}
-    </h1>
-    <div class="w-1/3 text-right text-base mb-4">
-      <div class="email">{{ contact.email }}</div>
-      <div class="phone">{{ contact.phone }}</div>
+  <div class="flex flex-col gap-2">
+    <div class="flex flex-col sm:flex-row sm:items-start sm:gap-4">
+      <h1 class="text-3xl sm:text-5xl font-medium font-heading mb-1 sm:mb-0 w-full sm:w-2/3">
+        {{ name }}
+      </h1>
+      <div class="w-full sm:w-1/3 text-left sm:text-right text-base">
+        <div class="email break-all">{{ contact.email }}</div>
+        <div class="phone">{{ contact.phone }}</div>
+      </div>
     </div>
     <div class="w-full mt-2">
-      <p class="intro text-sm">{{ intro }}</p>
+      <p class="intro text-sm sm:text-base">{{ intro }}</p>
     </div>
   </div>
 </template>
