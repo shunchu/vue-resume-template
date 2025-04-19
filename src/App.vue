@@ -60,12 +60,13 @@
 </template>
 
 <script>
-import ResumeData from "./resume_data";
+import getResumeDataSource from "./data/resumeDataSourceFactory";
 import MyEducation from "./components/MyEducation.vue";
 import MyExperience from "./components/MyExperience.vue";
 import MyHeadline from "./components/MyHeadline.vue";
 import MySocialMedia from "./components/MySocialMedia.vue";
 import MyVolunteer from "./components/MyVolunteer.vue";
+import { ref, onMounted, computed } from "vue";
 
 export default {
   name: "app",
@@ -76,8 +77,32 @@ export default {
     MyEducation,
     MySocialMedia
   },
-  data() {
-    return ResumeData();
+  setup() {
+    const dataSource = getResumeDataSource();
+    const resume = ref(null);
+    const loading = ref(true);
+    const error = ref(null);
+
+    onMounted(async () => {
+      try {
+        resume.value = await dataSource.getResumeData();
+      } catch (err) {
+        error.value = err;
+      } finally {
+        loading.value = false;
+      }
+    });
+    return {
+      loading,
+      error,
+      name: computed(() => resume.value?.name || ""),
+      contact: computed(() => resume.value?.contact || {}),
+      intro: computed(() => resume.value?.intro || ""),
+      experiences: computed(() => resume.value?.experiences || []),
+      volunteer: computed(() => resume.value?.volunteer || []),
+      education: computed(() => resume.value?.education || []),
+      socialMedia: computed(() => resume.value?.socialMedia || [])
+    };
   }
 };
 </script>
