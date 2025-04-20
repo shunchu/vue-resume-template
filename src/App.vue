@@ -14,7 +14,7 @@
             <td class="pt-4 pb-4 border-t border-gray-300 align-top w-full sm:w-56 min-w-[10rem] pr-2">
               <h5 class="text-lg font-semibold mb-1">Experience</h5>
             </td>
-            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 sm:pl-4">
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 xm:pl-4">
               <ul class="list-none p-0">
                 <my-experience class="mb-4 last:mb-0 my-experience" v-for="(experience, index) in experiences" :experience="experience" :key="'exp-' + index"></my-experience>
               </ul>
@@ -25,7 +25,7 @@
             <td class="pt-4 pb-4 border-t border-gray-300 align-top w-full sm:w-56 min-w-[10rem] pr-2">
               <h5 class="text-lg font-semibold mb-1">Volunteer</h5>
             </td>
-            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 sm:pl-4">
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 xm:pl-4">
               <ul class="list-none p-0">
                 <my-volunteer class="mb-0 last:mb-0 my-volunteer" v-for="(vol, index) in volunteer" :vol="vol" :key="'vol-' + index"></my-volunteer>
               </ul>
@@ -36,7 +36,7 @@
             <td class="pt-4 pb-4 border-t border-gray-300 align-top w-full sm:w-56 min-w-[10rem] pr-2">
               <h5 class="text-lg font-semibold mb-1">Education</h5>
             </td>
-            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 sm:pl-4">
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 xm:pl-4">
               <ul class="list-none p-0">
                 <my-education class="mb-4 last:mb-0 my-education" v-for="(edu, index) in education" :edu="edu" :key="'edu-' + index"></my-education>
               </ul>
@@ -47,7 +47,7 @@
             <td class="pt-4 pb-4 border-t border-gray-300 align-top w-full sm:w-56 min-w-[10rem] pr-2">
               <h5 class="text-lg font-semibold mb-1">Social Media</h5>
             </td>
-            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 sm:pl-4">
+            <td class="pt-4 pb-4 border-t border-gray-300 text-left pl-0 xm:pl-4">
               <ul class="list-none p-0">
                 <my-social-media class="px-2 pb-1 text-base" v-for="(sm, index) in socialMedia" :sm="sm" :key="'sm-' + index"></my-social-media>
               </ul>
