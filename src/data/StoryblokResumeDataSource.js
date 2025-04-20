@@ -5,35 +5,36 @@ const ACCESS_TOKEN = import.meta.env.VITE_STORYBLOK_TOKEN;
 const SLUG = 'resume';
 const VERSION = import.meta.env.VITE_ENV === 'production' ? 'published' : 'draft';
 
-const formatContact = (contact) => {
-  if (Array.isArray(contact)) {
-    contact = contact[0] || {};
+function mapStoryblokData(content) {
+  // Normalize contact
+  if (Array.isArray(content.contact)) {
+    content.contact = content.contact[0] || {};
   }
-  return contact;
-};
 
-const formatExperienceDetails = (experience) => {
-  return (experience || []).map((exp) => {
-    if (Array.isArray(exp.desc)) {
-      exp.desc = exp.desc[0] || {};
-    }
-    // Only keep the 'details' attribute from each object in desc.resp
-    if (Array.isArray(exp.desc?.resp)) {
-      exp.desc.resp = exp.desc.resp.map(item => item.details);
-    }
+  // Normalize experiences
+  if (Array.isArray(content.experiences)) {
+    content.experiences = content.experiences.map((exp) => {
+      if (Array.isArray(exp.desc)) {
+        exp.desc = exp.desc[0] || {};
+      }
+      if (Array.isArray(exp.desc?.resp)) {
+        exp.desc.resp = exp.desc.resp.map(item => item.details);
+      }
+      return exp;
+    });
+  }
 
-    return exp;
-  });
-};
+  // Normalize education
+  if (Array.isArray(content.education)) {
+    content.education = content.education.map((edu) => {
+      if (Array.isArray(edu.distinctions)) {
+        edu.distinctions = edu.distinctions.map(item => item.distinction);
+      }
+      return edu;
+    });
+  }
 
-const formatEducationDetails = (education) => {
-  return (education || []).map((edu) => {
-    if (Array.isArray(edu.distinctions)) {
-      edu.distinctions = edu.distinctions.map(item => item.distinction);
-    }
-
-    return edu;
-  });
+  return content;
 }
 
 export default class StoryblokResumeDataSource extends ResumeDataSource {
@@ -48,11 +49,6 @@ export default class StoryblokResumeDataSource extends ResumeDataSource {
 
   async getResumeData() {
     const response = await this.client.get(`cdn/stories/${this.slug}`, { version: VERSION });
-    const content = response.data.story.content;
-    content.contact = formatContact(content.contact);
-    content.experiences = formatExperienceDetails(content.experiences);
-    content.education = formatEducationDetails(content.education);
-
-    return content;
+    return mapStoryblokData(response.data.story.content);
   }
 }
